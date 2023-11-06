@@ -1,2 +1,2 @@
 run_as_service="true"
-interval="90"
+interval="3"
