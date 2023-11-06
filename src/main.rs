@@ -17,10 +17,12 @@ fn main() {
 
     let interval = settings_map.get("interval").unwrap();
     let run_as_service = settings_map.get("run_as_service").unwrap();
+    let user = settings_map.get("user").unwrap();
 
 
 
-    let user = String::from_utf8(process::Command::new("whoami").output().unwrap().stdout).unwrap();
+
+    // let user = String::from_utf8(process::Command::new("whoami").output().unwrap().stdout).unwrap();
     let path = format!("/home/{}/Pictures/", user.trim());
     let walker = WalkDir::new(path).into_iter();
     let mut vec_of_wallpaper: Vec<String> = vec![];

@@ -1,2 +1,3 @@
-run_as_service="true"
+run_as_service="false"
 interval="3"
+user="foxx"

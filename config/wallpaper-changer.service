@@ -1,0 +1,12 @@
+[Unit]
+Description=wallpaper changer
+
+[Service]
+Type=simple
+User=<your user>
+Group=<your user>
+ExecStart=cd /home/<<USER>>/RustroverProjects/Gnome3-wallpaper-changer/ && ./target/release/Gnome3-wallpaper-changer
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
