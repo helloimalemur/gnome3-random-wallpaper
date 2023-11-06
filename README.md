@@ -1,6 +1,8 @@
 # gnome3-random-wallpaper
 gnome3 random wallpaper
 
+Globs pictures from your /home/user/Pictures folder.
+
 **Build**
 ```shell
 cargo build --release
