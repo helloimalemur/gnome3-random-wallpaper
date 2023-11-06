@@ -6,9 +6,14 @@ use walkdir::{DirEntry, WalkDir};
 use rand::prelude::*;
 
 fn main() {
+    let user_bind = String::from_utf8(process::Command::new("whoami").output().unwrap().stdout).unwrap();
+    let user = user_bind.trim();
+    let config_path = format!("/home/{}/.config/Gnome3-wallpaper-changer/Settings.toml", user);
+
+    println!("{}", config_path);
     // load config
     let settings = config::Config::builder()
-        .add_source(config::File::with_name("config/Settings.toml"))
+        .add_source(config::File::with_name(config_path.as_str()))
         .build()
         .unwrap();
     let settings_map = settings
