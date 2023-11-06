@@ -5,13 +5,13 @@ Globs pictures from your /home/user/Pictures folder.
 
 **Build**
 ```shell
-cargo build --release
+bash -e install.sh
 ```
 <br><br>
 
 **Run as service**
 
-config/Settings.toml
+~/.Gnome3-wallpaper-changer
 ```toml
 run_as_service="true"
 interval="3"
@@ -22,5 +22,5 @@ interval="3"
 
 set run_as_service to false
 ```shell
-*/15 * * * * /path/to/repo/gnome3-wallpaper-changer/target/release/gnome3-wallpaper-changer
+*/15 * * * * ~/.Gnome3-wallpaper-changer
 ```
