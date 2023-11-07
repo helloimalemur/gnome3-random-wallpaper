@@ -23,12 +23,14 @@ fn main() {
     let interval = settings_map.get("interval").unwrap();
     let run_as_service = settings_map.get("run_as_service").unwrap();
     let user = settings_map.get("user").unwrap();
+    let wallpapers_folder = settings_map.get("wallpapers_folder").unwrap();
+
 
 
 
 
     // let user = String::from_utf8(process::Command::new("whoami").output().unwrap().stdout).unwrap();
-    let path = format!("/home/{}/Pictures/", user.trim());
+    let path = format!("/home/{}{}", user.trim(), wallpapers_folder.trim());
     let walker = WalkDir::new(path).into_iter();
     let mut vec_of_wallpaper: Vec<String> = vec![];
     for mut entry in walker.filter_entry(|e| !is_hidden(e)) {

@@ -1,3 +1,4 @@
 run_as_service="false"
 interval="3"
 user="foxx"
+wallpapers_folder="/Pictures/wallpapers/"
